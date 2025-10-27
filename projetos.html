@@ -1,123 +1,239 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Projetos sociais da ONG Hemora - Voluntariado e doação de sangue.">
-    <meta name="keywords" content="ONG, Hemora, projetos sociais, voluntariado, doação, comunidade">
-    <meta name="author" content="ONG Hemora">
-    <link rel="icon" type="image/svg+xml" href="./assets/icons/droplet-hand.svg">
-    <link rel="icon" type="image/x-icon" href="./assets/icons/droplet-hand.svg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Projetos sociais da ONG Hemora - Voluntariado e doação de sangue."
+    />
+    <meta
+      name="keywords"
+      content="ONG, Hemora, projetos sociais, voluntariado, doação, comunidade"
+    />
+    <meta name="author" content="ONG Hemora" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./assets/icons/droplet-hand.svg"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/icons/droplet-hand.svg"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Hemora | Projetos</title>
-</head>
-<body class="app-layout">
-<header class="app-layout__header">
-    <nav class="app-layout__nav">
-        <ul>
-            <li><a href="index.html">Ínicio</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
+  </head>
+  <body class="app-layout">
+    <header class="app-layout__header">
+      <a href="index.html" class="header__logo">Hemora</a>
+
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="app-layout__nav">
+        <ul class="nav-menu">
+          <li><a href="index.html">Ínicio</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
         </ul>
-    </nav>
-</header>
-<main class="app-layout__main-content">
-    <section class="main-content__hero">
+      </nav>
+    </header>
+    <main class="app-layout__main-content">
+      <section class="main-content__hero">
         <h1 class="main-content__title">Projetos Sociais Hemora</h1>
 
         <picture>
-            <source
-                    media="(min-width: 768px)"
-                    srcset="./assets/images/banner-projetos-large.webp"
-                    type="image/webp"
-            >
+          <source
+            media="(min-width: 768px)"
+            srcset="./assets/images/banner-projetos-large.webp"
+            type="image/webp"
+          />
 
-            <source
-                    media="(max-width: 767px)"
-                    srcset="./assets/images/banner-projetos-medium.webp"
-                    type="image/webp"
-            >
+          <source
+            media="(max-width: 767px)"
+            srcset="./assets/images/banner-projetos-medium.webp"
+            type="image/webp"
+          />
 
-            <img
-                    src="./assets/images/banner-projetos-large.webp"
-                    alt="Grupo de voluntários trabalhando em uma campanha de doação"
-                    width="1200"
-                    height="400"
-                    loading="eager"
-            >
+          <img
+            src="./assets/images/banner-projetos-large.webp"
+            alt="Grupo de voluntários trabalhando em uma campanha de doação"
+            width="1200"
+            height="400"
+            loading="eager"
+          />
         </picture>
-    </section>
-    <section class="content-info">
-        <h2 class="content-info__title">Conheça nossos projetos, voluntariado e como doar</h2>
+      </section>
+      <section class="content-info">
+        <h2 class="content-info__title">
+          Conheça nossos projetos, voluntariado e como doar
+        </h2>
         <article class="content-info__card">
-            <h3 class="content-info__title">Nossa Missão e Impacto</h3>
-            <img
-                    src="./assets/images/projetos-1-medium.webp"
-                    alt="Médico fazendo o procedimento de doação de sangue em um voluntário"
-                    width="300"
-                    height="200"
-                    loading="lazy"
-
-                    srcset="./assets/images/projetos-1-small.webp 320w,
-                ./assets/images/projetos-1-medium.webp 600w,
-                ./assets/images/projetos-1-large.webp 800w"
-
-                    sizes="(max-width: 600px) 320px,
+          <h3 class="content-info__title">Nossa Missão e Impacto</h3>
+          <img
+            src="./assets/images/projetos-1-medium.webp"
+            alt="Médico fazendo o procedimento de doação de sangue em um voluntário"
+            width="300"
+            height="200"
+            loading="lazy"
+            srcset="
+              ./assets/images/projetos-1-small.webp  320w,
+              ./assets/images/projetos-1-medium.webp 600w,
+              ./assets/images/projetos-1-large.webp  800w
+            "
+            sizes="(max-width: 600px) 320px,
                (max-width: 1000px) 600px,
                800px"
-            >
-            <p>
-                Projetos e Educação <br> Nossos projetos de impacto social incluem campanhas educativas e apoio logístico a hemocentros. Veja nossas ações de conscientização e como sua contribuição se transforma em vidas salvas na comunidade.
-            </p>
+          />
+          <p>
+            Projetos e Educação <br />
+            Nossos projetos de impacto social incluem campanhas educativas e
+            apoio logístico a hemocentros. Veja nossas ações de conscientização
+            e como sua contribuição se transforma em vidas salvas na comunidade.
+          </p>
         </article>
         <article class="content-info__card">
-            <h3 class="content-info__title">Participe: Voluntariado e Doação</h3>
-            <img
-                    src="./assets/images/projetos-3-medium.webp"
-                    alt="Médico medindo a pressão arterial de um voluntário"
-                    width="300"
-                    height="200"
-                    loading="lazy"
-
-                    srcset="./assets/images/projetos-2-small.webp 320w,
-                ./assets/images/projetos-2-medium.webp 600w,
-                ./assets/images/projetos-2-large.webp 800w"
-
-                    sizes="(max-width: 600px) 320px,
+          <h3 class="content-info__title">Participe: Voluntariado e Doação</h3>
+          <img
+            src="./assets/images/projetos-3-medium.webp"
+            alt="Médico medindo a pressão arterial de um voluntário"
+            width="300"
+            height="200"
+            loading="lazy"
+            srcset="
+              ./assets/images/projetos-2-small.webp  320w,
+              ./assets/images/projetos-2-medium.webp 600w,
+              ./assets/images/projetos-2-large.webp  800w
+            "
+            sizes="(max-width: 600px) 320px,
                (max-width: 1000px) 600px,
                800px"
-            >
-            <p>
-                Detalhes da Participação<br>Seja um Voluntário e ajude em campanhas e eventos. Para Doar, saiba que sua contribuição apoia diretamente nossas ações sociais e o desenvolvimento da plataforma.
-            </p>
+          />
+          <p>
+            Detalhes da Participação<br />Seja um Voluntário e ajude em
+            campanhas e eventos. Para Doar, saiba que sua contribuição apoia
+            diretamente nossas ações sociais e o desenvolvimento da plataforma.
+          </p>
         </article>
         <article class="content-info__card">
-            <h3 class="content-info__title">Transparência e Contato</h3>
-            <img
-                    src="./assets/images/projetos-3-medium.webp"
-                    alt="Diversas bolsas de sangue cheias e organizadas"
-                    width="300"
-                    height="200"
-                    loading="lazy"
-
-                    srcset="./assets/images/projetos-3-small.webp 320w,
-                ./assets/images/projetos-3-medium.webp 600w,
-                ./assets/images/projetos-3-large.webp 800w"
-
-                    sizes="(max-width: 600px) 320px,
+          <h3 class="content-info__title">Transparência e Contato</h3>
+          <img
+            src="./assets/images/projetos-3-medium.webp"
+            alt="Diversas bolsas de sangue cheias e organizadas"
+            width="300"
+            height="200"
+            loading="lazy"
+            srcset="
+              ./assets/images/projetos-3-small.webp  320w,
+              ./assets/images/projetos-3-medium.webp 600w,
+              ./assets/images/projetos-3-large.webp  800w
+            "
+            sizes="(max-width: 600px) 320px,
                (max-width: 1000px) 600px,
                800px"
-            >
-            <p>
-                Como e Onde Doar Sangue<br>Encontre nosso guia completo de como se preparar para a doação de sangue. Nossa central de documentos públicos garante a transparência total sobre a aplicação dos recursos captados.
-            </p>
+          />
+          <p>
+            Como e Onde Doar Sangue<br />Encontre nosso guia completo de como se
+            preparar para a doação de sangue. Nossa central de documentos
+            públicos garante a transparência total sobre a aplicação dos
+            recursos captados.
+          </p>
         </article>
-    </section>
-</main>
-<footer class="app-layout__footer">
-    <p>&copy; 2024 ONG Hemora. Todos os direitos reservados.</p>
-    <address>
-        Endereço Completo, Cidade - Estado. CEP 00000-000.
-    </address>
-</footer>
-</body>
+      </section>
+      <section aria-labelledby="faq-title">
+        <h2 id="faq-title">Tudo Sobre a Doação de Sangue</h2>
+
+        <details>
+          <summary>
+            <h3>Quem Pode Doar?</h3>
+          </summary>
+          <p>
+            Para doar sangue, você precisa atender aos seguintes requisitos:
+          </p>
+          <ul>
+            <li>Estar em boas condições de saúde.</li>
+            <li>Ter entre 16 e 69 anos.</li>
+            <li>Pesar no mínimo 50 kg.</li>
+            <li>
+              Estar descansado (ter dormido pelo menos 6 horas nas últimas 24
+              horas).
+            </li>
+            <li>
+              Estar alimentado (evitar alimentos gordurosos nas 4 horas que
+              antecedem a doação).
+            </li>
+          </ul>
+          <p>
+            Antes da doação, uma entrevista e triagem são realizadas para
+            verificar se o doador está apto.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            <h3>Como é Realizada a Coleta?</h3>
+          </summary>
+          <p>
+            A coleta de sangue é um processo simples, rápido e seguro. Durante a
+            doação, são retirados cerca de 450 ml de sangue, que o corpo é capaz
+            de repor em até 24 horas.
+          </p>
+          <p>
+            A doação é feita em uma sala especial, onde o doador se deita e um
+            profissional de saúde realiza a punção venosa. Todo o material
+            utilizado é estéril e descartável, garantindo a total segurança do
+            doador.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            <h3>Quais Testes São Realizados?</h3>
+          </summary>
+          <p>
+            Após a coleta, seu sangue passa por uma análise completa para
+            garantir a segurança de quem vai recebê-lo. São realizados testes
+            para classificar o tipo sanguíneo (Sistemas ABO e Rh) e testes
+            sorológicos para identificar doenças infecciosas como Sífilis,
+            Doença de Chagas, Hepatite B, Hepatite C, HIV e HTLV.
+          </p>
+          <p>
+            Somente após a confirmação de que o sangue está livre de infecções,
+            ele é liberado para uso.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            <h3>Quais os Benefícios de Doar?</h3>
+          </summary>
+          <p>
+            Uma única doação de sangue pode salvar até quatro vidas. Além do ato
+            de solidariedade, a doação traz benefícios para o doador, como a
+            renovação sanguínea e a realização de um check-up de saúde gratuito,
+            pois todos os testes necessários são realizados no sangue doado.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            <h3>O Doador Tem Direitos?</h3>
+          </summary>
+          <p>
+            Sim. O doador de sangue tem direito a um dia de folga no trabalho a
+            cada 12 meses trabalhados, conforme previsto na Consolidação das
+            Leis do Trabalho (CLT). Este direito também se estende a
+            funcionários públicos civis de autarquia ou militares.
+          </p>
+        </details>
+      </section>
+    </main>
+    <footer class="app-layout__footer">
+      <p>&copy; 2024 ONG Hemora. Todos os direitos reservados.</p>
+      <address>Endereço Completo, Cidade - Estado. CEP 00000-000.</address>
+    </footer>
+  </body>
 </html>
