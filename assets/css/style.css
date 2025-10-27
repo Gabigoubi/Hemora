@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -13,39 +15,64 @@ html {
 
 :root {
   --color-primary: #a50e3e;
+  --color-primary-dark: #8a0b34;
   --color-secondary: #ffd1dc;
   --color-text: #222;
   --color-bg: #fff;
-  --radius: 0.5rem;
-  --spacing: 1rem;
-  --font-size-base: clamp(1rem, 2vw, 1.2rem);
-  --font-size-title: clamp(1.4rem, 3vw, 2rem);
-
-  --color-primary-dark: #8a0b34;
   --color-neutral-light: #f0f0f0;
   --color-feedback-success: #28a745;
   --color-feedback-error: #dc3545;
+  --radius: 0.5rem;
+  --spacing: 1rem;
+  --font-family-base: "Poppins", system-ui, sans-serif;
+  --font-size-base: clamp(1rem, 2vw, 1.1rem);
+  --font-size-title: clamp(1.4rem, 3vw, 2rem);
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 body.app-layout {
-  font-family: system-ui, sans-serif;
+  font-family: var(--font-family-base);
   color: var(--color-text);
-  background-color: var(--color-bg);
   line-height: 1.5;
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   overflow-x: hidden;
+
+  position: relative;
+  z-index: 1;
+  background-color: #fdfcff;
+}
+
+body.app-layout::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  background-image: url("../images/background.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  opacity: 0.2;
 }
 
 .app-layout__header {
   padding: var(--spacing);
-  background-color: #f9f9f9;
+  background-color: var(--color-bg);
   border-bottom: 1px solid #ddd;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-light);
 }
 
 .app-layout__main-content {
@@ -78,16 +105,13 @@ body.app-layout {
   font-size: 1.5rem;
 }
 
-.app-layout__nav {
-  display: none;
-}
-
 .nav-toggle {
   display: block;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  z-index: 1000;
 }
 
 .hamburger {
@@ -130,27 +154,32 @@ body.nav-open .nav-toggle .hamburger::after {
   bottom: 0;
 }
 
-.nav-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing);
-  list-style: none;
-
+.app-layout__nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 80%;
+  max-width: 300px;
   height: 100vh;
   background: var(--color-bg);
-  padding-top: 5rem;
-
+  box-shadow: var(--shadow-hover);
   transform: translateX(-100%);
   transition: transform 0.3s ease-out;
+  z-index: 900;
+  overflow-y: auto;
 }
 
-.nav-menu--visible {
+body.nav-open .app-layout__nav {
   transform: translateX(0);
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(var(--spacing) * 1.5);
+  list-style: none;
+  padding: 6rem 2rem;
 }
 
 .nav-menu a {
@@ -160,6 +189,12 @@ body.nav-open .nav-toggle .hamburger::after {
   padding: 0.5rem;
   border-radius: var(--radius);
   font-size: 1.5rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--color-primary-dark);
+  transform: translateX(5px);
 }
 
 h1,
@@ -208,10 +243,17 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  box-shadow: var(--shadow-light);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.content-info__card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
 .content-info__card-title,
-.content-info_card .content-info_title {
+.content-info__card .content-info__title {
   margin-bottom: 0.5rem;
   color: var(--color-primary);
 }
@@ -261,13 +303,14 @@ h3 {
   display: block;
 }
 
-.form_input,
-.form_button {
+.form__input,
+.form__button {
   width: 100%;
   padding: 0.8rem;
   border-radius: var(--radius);
   border: 1px solid #ccc;
   font-size: 1rem;
+  font-family: var(--font-family-base);
 }
 
 .form__button {
@@ -276,10 +319,24 @@ h3 {
   border: none;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .form__button:hover {
-  filter: brightness(1.1);
+  background: var(--color-primary-dark);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+.form__button:active {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-light);
+}
+
+.form__input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-secondary);
 }
 
 .side-info {
@@ -302,9 +359,9 @@ a {
   transition: all 0.2s ease;
 }
 
-a:focus,
-button:focus,
-input:focus {
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
 }
@@ -342,6 +399,11 @@ details {
   border: 1px solid #ddd;
   border-radius: var(--radius);
   margin-bottom: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+details:hover {
+  background-color: var(--color-neutral-light);
 }
 
 summary {
@@ -349,19 +411,28 @@ summary {
   cursor: pointer;
   font-weight: bold;
   list-style: none;
-  transition: background-color 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 summary::-webkit-details-marker {
   display: none;
 }
 
-summary:hover {
-  background-color: var(--color-secondary);
+summary::after {
+  content: "❯";
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  transform: rotate(90deg);
+  transition: transform 0.2s ease;
+}
+
+details[open] > summary::after {
+  transform: rotate(270deg);
 }
 
 summary h3 {
-  display: inline;
   font-size: 1.1rem;
   color: var(--color-primary);
 }
@@ -405,7 +476,13 @@ details li {
   }
 
   .app-layout__nav {
-    display: block;
+    position: static;
+    transform: none;
+    box-shadow: none;
+    height: auto;
+    width: auto;
+    background: transparent;
+    overflow-y: visible;
   }
 
   .nav-menu {
@@ -415,7 +492,7 @@ details li {
     width: auto;
     background: transparent;
     transform: translateX(0);
-    padding-top: 0;
+    padding: 0;
   }
 
   .nav-menu a {
@@ -424,6 +501,8 @@ details li {
 
   .app-layout__nav a:hover {
     background-color: var(--color-secondary);
+    transform: none;
+    color: var(--color-primary);
   }
 
   .content-info {
@@ -441,12 +520,21 @@ details li {
     order: 0;
   }
 
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form__button {
+    grid-column: 1 / -1;
+  }
+
   .form-container {
-    max-width: 700px;
+    max-width: 1024px;
   }
 
   .side-info {
-    max-width: 700px;
+    max-width: 1024px;
   }
 }
 
