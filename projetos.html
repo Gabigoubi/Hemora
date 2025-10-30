@@ -23,15 +23,25 @@
       href="./assets/icons/droplet-hand.svg"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/javascript/script.js" defer></script>
     <title>Hemora | Projetos</title>
   </head>
   <body class="app-layout">
     <header class="app-layout__header">
       <a href="index.html" class="header__logo">Hemora</a>
 
-      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-        <span class="hamburger"></span>
-      </button>
+      <div class="header-controls">
+        <button class="dark-mode-toggle" aria-label="Ativar modo escuro">
+          <span class="toggle-icon">🌙</span>
+        </button>
+        <button
+          class="nav-toggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger"></span>
+        </button>
+      </div>
 
       <nav class="app-layout__nav">
         <ul class="nav-menu">
@@ -143,6 +153,28 @@
           </p>
         </article>
       </section>
+
+      <section class="impact-stats">
+        <div class="stat-item">
+          <span class="stat-item__number">1 em 4</span>
+          <span class="stat-item__text"
+            >Pessoas precisará de sangue ao menos uma vez na vida.</span
+          >
+        </div>
+        <div class="stat-item">
+          <span class="stat-item__number">450ml</span>
+          <span class="stat-item__text"
+            >É a quantidade de uma doação, que pode salvar até 4 vidas.</span
+          >
+        </div>
+        <div class="stat-item">
+          <span class="stat-item__number">-30%</span>
+          <span class="stat-item__text"
+            >É a queda média nos estoques de sangue durante o inverno.</span
+          >
+        </div>
+      </section>
+
       <section aria-labelledby="faq-title">
         <h2 id="faq-title">Tudo Sobre a Doação de Sangue</h2>
 
@@ -229,6 +261,11 @@
             funcionários públicos civis de autarquia ou militares.
           </p>
         </details>
+      </section>
+
+      <section class="cta-section">
+        <h2 class="cta-section__title">Pronto para Fazer a Diferença?</h2>
+        <a href="cadastro.html" class="cta-button">Junte-se à Causa</a>
       </section>
     </main>
     <footer class="app-layout__footer">

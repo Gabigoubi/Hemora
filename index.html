@@ -27,25 +27,32 @@
       type="image/svg+xml"
       href="./assets/icons/droplet-hand.svg"
     />
+    <script src="./assets/javascript/script.js" defer></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Hemora | Início</title>
   </head>
   <body class="app-layout">
-    <header class="app-layout__header">
-      <a href="index.html" class="header__logo">Hemora</a>
+  <header class="app-layout__header">
+  <a href="index.html" class="header__logo">Hemora</a>
 
-      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-        <span class="hamburger"></span>
-      </button>
+  <div class="header-controls">
+    
+    <button class="dark-mode-toggle" aria-label="Ativar modo escuro">
+      <span class="toggle-icon">🌙</span>
+    </button>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+  </div>
 
-      <nav class="app-layout__nav">
-        <ul class="nav-menu">
-          <li><a href="index.html">Ínicio</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="cadastro.html">Cadastro</a></li>
-        </ul>
-      </nav>
-    </header>
+  <nav class="app-layout__nav">
+    <ul class="nav-menu">
+      <li><a href="index.html">Ínicio</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="cadastro.html">Cadastro</a></li>
+    </ul>
+  </nav>
+</header>
     <main class="app-layout__main-content">
       <section class="main-content__hero">
         <h1 class="main-content__title">
@@ -151,6 +158,24 @@
           </p>
         </article>
       </section>
+
+      </section>
+
+    <section class="info-section">
+      <h2 class="info-section__title">A Diferença que uma Doação Faz</h2>
+      <div class="info-section__content">
+        <p>
+          A doação de sangue é um ato de solidariedade insubstituível. Diferente de outros tratamentos, o sangue humano não pode ser fabricado artificialmente. Ele é essencial para atender pacientes em cirurgias de grande porte, tratamentos oncológicos (câncer), vítimas de acidentes graves e pessoas com doenças crônicas.
+        </p>
+        <p>
+          Uma única doação pode salvar até quatro vidas. O processo é rápido, totalmente seguro e todo o material é descartável. A Hemora atua na conscientização para que os estoques dos hemocentros estejam sempre preparados para quem precisa.
+        </p>
+      </div>
+    </section>
+<section class="cta-section">
+      <h2 class="cta-section__title">Nossa Causa em Ação</h2>
+      <a href="projetos.html" class="cta-button">Veja Nossos Projetos</a>
+    </section>
     </main>
     <footer class="app-layout__footer">
       <p>&copy; 2024 ONG Hemora. Todos os direitos reservados.</p>
